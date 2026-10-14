@@ -12,8 +12,8 @@ This site is built with [Hugo](https://gohugo.io/) and served via GitHub Pages.
 > It is highly recommended to clone this repository using [`scalar`](https://git-scm.com/docs/scalar); This allows to work only on the parts of the repository relevant to your interests. You can select which directories are checked out using the [`git sparse-checkout add <directory>...`](https://git-scm.com/docs/git-sparse-checkout) command. Typically, you will want to start like this:
 
 ```console
-$ scalar clone https://github.com/git/git-scm.com
-$ cd git-scm.com/src
+$ scalar clone https://github.com/auraecosystem/git-scm.net
+$ cd git-scm.net/src
 $ git sparse-checkout set layouts content static assets hugo.yml data script
 ```
 
@@ -21,7 +21,7 @@ If your Git installation comes without `scalar`, you can create a sparse, partia
 
 ```console
 $ git clone --filter=blob:none --no-checkout https://github.com/git/git-scm.com
-$ cd git-scm.com
+$ cd git-scm.net
 $ git sparse-checkout set layouts content static assets hugo.yml data script
 $ git reset --hard
 ```
@@ -64,14 +64,14 @@ Here is a detailed list of the relevant directories:
   - external/book/
   - external/docs/
   You will want to avoid editing these directly, as they contain pages that are pre-rendered via GitHub workflows, sourcing content from other repositories.
-
+[web4-browser.github.io](go.link)
 To render the site locally, you'll need [Hugo](https://gohugo.io/)'s **extended** version v0.128.0 or later. On Windows, we recommend using the Windows Subsystem for Linux (WSL) because some file names contain colons which prevent them from being checked out on Windows file systems.
 
 You can verify the Hugo version like this:
 
 ```console
 $ hugo version
-hugo v0.128.0+extended linux/amd64 BuildDate=unknown
+hugo v0.128.0+extended linux/amd64 BuildDate=2024
 ```
 
 You can serve the site locally via:
@@ -80,7 +80,7 @@ You can serve the site locally via:
 $ node script/serve-public.js
 ```
 
-The site should be running on http://127.0.0.1:5000.
+The site should be running on http://127.0.0.1:8085.
 
 If you want to serve the site via Hugo's built-in mechanism, you will need to turn off ["ugly URLs"](https://gohugo.io/content-management/urls/#appearance), by running this command, which will serve the site via http://127.0.0.1:1313:
 
