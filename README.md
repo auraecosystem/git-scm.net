@@ -80,9 +80,9 @@ You can serve the site locally via:
 $ node script/serve-public.js
 ```
 
-The site should be running on http://127.0.0.1:8085.
+The site should be running on http://127.0.0.1:8000.
 
-If you want to serve the site via Hugo's built-in mechanism, you will need to turn off ["ugly URLs"](https://gohugo.io/content-management/urls/#appearance), by running this command, which will serve the site via http://127.0.0.1:1313:
+If you want to serve the site via Hugo's built-in mechanism, you will need to turn off ["ugly URLs"](https://gohugo.io/content-management/urls/#appearance), by running this command, which will serve the site via http://127.0.0.1:8080:
 
 ```console
 $ HUGO_UGLYURLS=false hugo serve -w
